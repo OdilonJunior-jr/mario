@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth bg-[#050505]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Bento | Consultoria de Alta Performance</title>
+    <meta name="description" content="Metodologia científica de treinamento para emagrecimento e definição.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#2563eb',
+                            dark: '#050505',
+                            card: '#111111',
+                            border: '#27272a'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; color: #a1a1aa; }
+        h1, h2, h3, h4, .font-display { font-family: 'Outfit', sans-serif; color: white; letter-spacing: -0.01em; }
+        
+        .glass-nav { background: rgba(5, 5, 5, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .image-container-portrait { aspect-ratio: 4 / 5; overflow: hidden; position: relative; }
+        .image-container-video { aspect-ratio: 16 / 9; overflow: hidden; position: relative; background: #000; }
+        .image-fit { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .group:hover .image-fit { transform: scale(1.03); }
+
+        .sim-input { width: 100%; background: #1a1a1a; border: 1px solid #333; padding: 10px 14px; border-radius: 6px; color: #666; outline: none; cursor: not-allowed; font-size: 0.875rem; }
+        .logo-box { background: white; padding: 3px 5px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="#" class="logo-box hover:scale-105 transition shadow-lg shadow-white/5">
+                <img src="logo-mario.jpg" alt="Mario Bento" class="h-6 w-auto mix-blend-multiply">
+            </a>
+
+            <div class="hidden md:flex gap-8 text-sm font-medium items-center">
+                <a href="#metodo" class="hover:text-white transition">Metodologia</a>
+                <a href="#resultados" class="hover:text-white transition">Resultados</a>
+                <a href="#planos" class="text-white font-bold border-b-2 border-brand-blue pb-0.5">Planos</a>
+            </div>
+
+            <a href="#planos" class="bg-brand-blue hover:bg-blue-700 text-white text-xs font-bold uppercase tracking-wide px-5 py-2.5 rounded-md transition-all shadow-lg shadow-blue-600/20">
+                Garantir Vaga
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="mario-hero.jpg" alt="Mario Bento" class="w-full h-full object-cover object-center md:object-top">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/70 to-transparent z-10"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 w-full relative z-20 pt-16">
+            <div class="max-w-xl">
+                <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-[10px] font-bold uppercase tracking-widest mb-4 backdrop-blur-md">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span> Consultoria de Alta Performance
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4 drop-shadow-2xl">
+                    Ciência aplicada <br>ao <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-white">seu resultado.</span>
+                </h1>
+                
+                <p class="text-base md:text-lg text-gray-300 mb-8 max-w-lg leading-relaxed font-light drop-shadow-md">
+                    Chega de treinos genéricos. Tenha um planejamento estratégico, baseado na sua fisiologia, para emagrecer e definir sem perder tempo.
+                </p>
+                
+                <div class="flex flex-wrap gap-3">
+                    <a href="#planos" class="bg-brand-blue hover:bg-blue-700 text-white font-bold text-sm px-6 py-3 rounded-md transition-all flex items-center gap-2 shadow-lg shadow-blue-900/30">
+                        Ver Planos e Valores <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#metodo" class="group bg-white/10 border border-white/20 hover:bg-white/20 text-white font-bold text-sm px-6 py-3 rounded-md transition-all flex items-center gap-2 backdrop-blur-sm">
+                        <i data-lucide="play-circle" class="w-4 h-4 text-brand-blue group-hover:text-white transition"></i> Entender o Método
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="metodo" class="py-20 bg-brand-dark border-y border-brand-border relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <div class="image-container-video rounded-xl border border-brand-border shadow-2xl relative group bg-black">
+                    <video controls class="image-fit opacity-90 group-hover:opacity-100 transition" poster="mario-hero.jpg"> 
+                        <source src="mario.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">O Fim do "Treino Fofo"</h2>
+                    <p class="text-base leading-relaxed mb-8 text-gray-400">
+                        Não existe treino mágico, existe treino planejado. Minha metodologia se baseia em dados concretos do seu corpo para garantir que você não desperdice nem um minuto na academia.
+                    </p>
+                    
+                    <div class="space-y-5">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center text-brand-blue shrink-0 border border-blue-600/20 mt-0.5">
+                                <span class="font-display font-bold text-lg">1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-1 text-white">Anamnese Profunda</h3>
+                                <p class="text-sm leading-relaxed">Mapeamento completo do seu sono, nutrição, rotina e histórico. O ponto de partida exato.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-lg bg-blue-600/10 flex items-center justify-center text-brand-blue shrink-0 border border-blue-600/20 mt-0.5">
+                                <span class="font-display font-bold text-lg">2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold mb-1 text-white">Prescrição Individual</h3>
+                                <p class="text-sm leading-relaxed">O treino certo para o seu biotipo e objetivo real, com periodização para evitar platôs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resultados" class="py-20 bg-[#080808]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3">Prova Social</h2>
+                <p class="max-w-xl mx-auto text-base">Pessoas reais que confiaram no processo e colheram os resultados com constância.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-brand-card border border-brand-border p-2.5 rounded-xl hover:border-brand-blue transition duration-300 group">
+                    <div class="image-container-portrait rounded-lg relative">
+                        <img src="antesedepois.jpg" alt="Resultado" class="image-fit">
+                         <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                             <p class="text-white font-bold uppercase tracking-wider text-xs">Pós-Gestação</p>
+                             <p class="text-brand-blue text-[10px] font-bold">Recuperação Total</p>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="bg-brand-card border border-brand-border p-2.5 rounded-xl hover:border-brand-blue transition duration-300 group">
+                    <div class="image-container-portrait rounded-lg relative grid grid-cols-2 gap-0.5">
+                        <div class="relative h-full overflow-hidden rounded-l-lg">
+                            <img src="antes1.jpg" alt="Antes" class="w-full h-full object-cover grayscale">
+                            <span class="absolute bottom-2 left-2 text-[8px] bg-black/70 px-2 py-0.5 rounded text-white font-bold backdrop-blur-sm">ANTES</span>
+                        </div>
+                        <div class="relative h-full overflow-hidden rounded-r-lg">
+                            <img src="depois1.jpg" alt="Depois" class="w-full h-full object-cover">
+                            <span class="absolute bottom-2 left-2 text-[8px] bg-brand-blue/90 px-2 py-0.5 rounded text-white font-bold backdrop-blur-sm">DEPOIS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="bg-brand-card border border-brand-border p-2.5 rounded-xl hover:border-brand-blue transition duration-300 group relative">
+                    <div class="image-container-portrait rounded-lg relative bg-black">
+                        <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
+                            <source src="videoantesdepois.mp4" type="video/mp4">
+                        </video>
+                         <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none">
+                             <p class="text-white font-bold uppercase tracking-wider text-xs">Emagrecimento Real</p>
+                             <p class="text-brand-blue text-[10px] font-bold flex items-center gap-1"><i data-lucide="play" class="w-3 h-3 fill-brand-blue"></i> Assista a evolução</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="py-20 bg-brand-dark border-t border-brand-border relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3">Invista em Você</h2>
+                <p class="max-w-xl mx-auto text-base">Escolha o nível de acompanhamento ideal para seus objetivos.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                
+                <div class="bg-brand-card border-2 border-brand-blue rounded-xl p-6 relative shadow-[0_0_30px_rgba(37,99,235,0.1)] flex flex-col transform hover:-translate-y-1 transition duration-300">
+                    <div class="absolute top-0 right-0 bg-brand-blue text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-widest">Mais Escolhido</div>
+                    
+                    <div class="mb-5">
+                        <h3 class="text-xl font-bold text-white mb-1">Consultoria Online</h3>
+                        <p class="text-sm text-gray-400">Direcionamento estratégico via aplicativo.</p>
+                    </div>
+                    
+                    <div class="mb-6 pb-6 border-b border-brand-border">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm text-gray-400">R$</span>
+                            <span class="text-5xl font-black text-white tracking-tight">397</span>
+                        </div>
+                        <span class="text-brand-blue font-bold text-xs uppercase tracking-wide">Plano Trimestral</span>
+                    </div>
+
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-blue shrink-0 mt-0.5"></i><span class="text-sm">App exclusivo com vídeos dos exercícios.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-blue shrink-0 mt-0.5"></i><span class="text-sm">Análise técnica de execução via vídeo.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-blue shrink-0 mt-0.5"></i><span class="text-sm">Suporte direto via WhatsApp.</span></li>
+                    </ul>
+
+                    <button onclick="openCheckout('online')" class="w-full bg-white hover:bg-gray-200 text-black py-3 rounded-lg text-sm font-bold uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-md">
+                        Garantir Vaga
+                    </button>
+                </div>
+
+                <div class="bg-brand-card border border-brand-border rounded-xl p-6 flex flex-col hover:border-gray-500 transition transform hover:-translate-y-1 duration-300">
+                    <div class="mb-5">
+                        <h3 class="text-xl font-bold text-white mb-1">Personal Presencial</h3>
+                        <p class="text-sm text-gray-400">A experiência VIP lado a lado.</p>
+                    </div>
+                    
+                    <div class="mb-6 pb-6 border-b border-brand-border">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-4xl font-black text-white tracking-tight">Sob Consulta</span>
+                        </div>
+                        <span class="text-gray-500 font-bold text-xs uppercase tracking-wide">Vagas Limitadas</span>
+                    </div>
+
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-start gap-3 text-gray-400"><i data-lucide="check" class="w-5 h-5 text-gray-500 shrink-0 mt-0.5"></i><span class="text-sm">Atendimento presencial exclusivo.</span></li>
+                        <li class="flex items-start gap-3 text-gray-400"><i data-lucide="check" class="w-5 h-5 text-gray-500 shrink-0 mt-0.5"></i><span class="text-sm">Correção tátil e técnica instantânea.</span></li>
+                        <li class="flex items-start gap-3 text-gray-400"><i data-lucide="check" class="w-5 h-5 text-gray-500 shrink-0 mt-0.5"></i><span class="text-sm">Avaliação física com adipômetro.</span></li>
+                    </ul>
+
+                    <button onclick="openCheckout('presencial')" class="w-full bg-transparent border-2 border-brand-border text-white py-3 rounded-lg text-sm font-bold uppercase tracking-wider hover:border-brand-border transition flex items-center justify-center gap-2">
+                        Verificar Agenda
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center bg-black border-t border-brand-border">
+        <div class="logo-box opacity-50 hover:opacity-100 transition duration-300 inline-flex scale-90">
+             <img src="logo-mario.jpg" class="h-5 w-auto mix-blend-multiply">
+        </div>
+        <p class="text-[10px] text-zinc-600 mt-3">© 2026 Mario Bento Personal Trainer.</p>
+    </footer>
+
+    <div id="checkoutModal" class="fixed inset-0 z-[100] hidden transition-opacity duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="closeModal()"></div>
+        
+        <div class="bg-brand-card border border-brand-border w-full max-w-md rounded-xl shadow-2xl relative transform scale-95 transition-all duration-300 overflow-hidden flex flex-col max-h-[90vh]" id="modalContainer">
+            <div class="px-5 py-3 border-b border-brand-border flex justify-between items-center bg-[#151515] shrink-0">
+                <div class="flex items-center gap-2" id="modalTitle"></div>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-white bg-white/5 p-1 rounded-full transition"><i data-lucide="x" class="w-4 h-4"></i></button>
+            </div>
+
+            <div class="p-5 overflow-y-auto">
+                <div id="onlineFlow" class="hidden space-y-5">
+                    <div class="bg-blue-950/30 p-3 rounded-lg border border-blue-900/50 flex justify-between items-center">
+                        <div><h4 class="text-white font-bold text-sm">Consultoria Online</h4><p class="text-brand-blue text-[10px] uppercase font-bold mt-0.5">Plano Trimestral</p></div>
+                        <div class="text-xl font-black text-white">R$ 397</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="space-y-2"><label class="text-[10px] font-bold text-gray-400 uppercase">Seus Dados (Simulação)</label><input type="text" class="sim-input" value="Nome do Cliente (Simulado)" readonly><input type="email" class="sim-input" value="cliente@email.com (Simulado)" readonly></div>
+                        <div class="space-y-2 pt-1"><label class="text-[10px] font-bold text-gray-400 uppercase flex items-center justify-between">Pagamento (Simulação) <i data-lucide="lock" class="w-3 h-3 text-green-500"></i></label>
+                            <div class="bg-[#0a0a0a] border border-brand-border rounded-lg p-3 space-y-3 opacity-80">
+                                <div class="relative"><i data-lucide="credit-card" class="absolute left-3 top-2.5 w-4 h-4 text-gray-500"></i><input type="text" class="sim-input pl-9" value="•••• •••• •••• 4242" readonly></div>
+                                <div class="grid grid-cols-2 gap-3"><input type="text" class="sim-input" value="12/28" readonly><input type="text" class="sim-input" value="•••" readonly></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="completePayment()" class="w-full bg-brand-blue hover:bg-blue-700 text-white py-3 rounded-lg text-sm font-bold uppercase tracking-wider transition shadow-lg mt-4 flex items-center justify-center gap-2 relative overflow-hidden" id="payButton">
+                        <span id="payText">Finalizar Simulação</span>
+                        <div id="paySpinner" class="hidden absolute inset-0 flex items-center justify-center bg-brand-blue"><div class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div></div>
+                    </button>
+                </div>
+                <div id="presencialFlow" class="hidden space-y-5">
+                    <p class="text-sm text-gray-400 leading-relaxed bg-zinc-900 p-3 rounded-lg border border-zinc-800">Dados simulados para envio via WhatsApp.</p>
+                    <div class="space-y-4">
+                        <div class="space-y-2">
+                            <div><label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Nome/Idade (Simulado)</label><input type="text" class="sim-input" value="Maria Oliveira, 30 anos" readonly></div>
+                            <div><label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Objetivo (Simulado)</label><input type="text" class="sim-input" value="Emagrecimento e Definição" readonly></div>
+                            <div><label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Disponibilidade (Simulado)</label><input type="text" class="sim-input" value="Manhã (07:00 - 09:00)" readonly></div>
+                        </div>
+                    </div>
+                    <button onclick="sendToWhatsApp()" class="w-full bg-white text-black hover:bg-gray-200 py-3 rounded-lg text-sm font-bold uppercase tracking-wider transition shadow-lg mt-4 flex items-center justify-center gap-2">Simular Envio WhatsApp <i data-lucide="send" class="w-4 h-4"></i></button>
+                </div>
+                <div id="successFlow" class="hidden py-8 text-center">
+                    <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4 text-green-500 border border-green-500/20"><i data-lucide="check-circle-2" class="w-8 h-8"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Simulação Concluída!</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed max-w-xs mx-auto">Link de acesso enviado para o e-mail simulado.</p>
+                    <button onclick="closeModal()" class="bg-brand-card border border-brand-border text-white px-6 py-2 rounded-md text-xs font-bold uppercase hover:bg-zinc-800 transition">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        const modal = document.getElementById('checkoutModal');
+        const modalContainer = document.getElementById('modalContainer');
+        const modalTitle = document.getElementById('modalTitle');
+        const onlineFlow = document.getElementById('onlineFlow');
+        const presencialFlow = document.getElementById('presencialFlow');
+        const successFlow = document.getElementById('successFlow');
+        const payButton = document.getElementById('payButton');
+        const payText = document.getElementById('payText');
+        const paySpinner = document.getElementById('paySpinner');
+
+        function openCheckout(type) {
+            onlineFlow.classList.add('hidden'); presencialFlow.classList.add('hidden'); successFlow.classList.add('hidden'); payText.classList.remove('opacity-0'); paySpinner.classList.add('hidden');
+            modal.classList.remove('hidden', 'opacity-0', 'pointer-events-none'); setTimeout(() => { modalContainer.classList.remove('scale-95'); }, 10);
+            if (type === 'online') { modalTitle.innerHTML = '<i data-lucide="lock" class="w-4 h-4 text-green-500"></i><span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Simulação de Pagamento</span>'; onlineFlow.classList.remove('hidden'); } 
+            else { modalTitle.innerHTML = '<i data-lucide="calendar" class="w-4 h-4 text-brand-blue"></i><span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Simulação de Agendamento</span>'; presencialFlow.classList.remove('hidden'); }
+            lucide.createIcons();
+        }
+        function closeModal() { modalContainer.classList.add('scale-95'); setTimeout(() => { modal.classList.add('hidden', 'opacity-0', 'pointer-events-none'); }, 200); }
+        function completePayment() { payText.classList.add('opacity-0'); paySpinner.classList.remove('hidden'); setTimeout(() => { onlineFlow.classList.add('hidden'); successFlow.classList.remove('hidden'); }, 2000); }
+        function sendToWhatsApp() { window.open(`https://wa.me/5500000000000?text=Simulacao`, '_blank'); closeModal(); }
+    </script>
+</body>
+</html>
