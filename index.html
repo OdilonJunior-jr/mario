@@ -37,8 +37,9 @@
         h1, h2, h3, h4, .font-display { font-family: 'Outfit', sans-serif; color: white; letter-spacing: -0.01em; }
         
         .glass-nav { background: rgba(5, 5, 5, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        /* Classes de imagem ajustadas para flexibilidade */
         .image-container-portrait { aspect-ratio: 4 / 5; overflow: hidden; position: relative; }
-        .image-container-video { aspect-ratio: 16 / 9; overflow: hidden; position: relative; background: #000; }
+        /* Removido container fixo de vídeo para permitir formato original */
         .image-fit { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
         .group:hover .image-fit { transform: scale(1.03); }
 
@@ -102,8 +103,8 @@
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 
-                <div class="image-container-video rounded-xl border border-brand-border shadow-2xl relative group bg-black">
-                    <video controls class="image-fit opacity-90 group-hover:opacity-100 transition" poster="mario-hero.jpg"> 
+                <div class="rounded-xl border border-brand-border shadow-2xl relative group bg-black overflow-hidden">
+                    <video controls class="w-full h-auto opacity-95 group-hover:opacity-100 transition duration-300"> 
                         <source src="mario.mp4" type="video/mp4">
                         Seu navegador não suporta vídeos.
                     </video>
